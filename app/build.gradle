@@ -35,6 +35,8 @@ dependencies {
     implementation 'com.github.Shashank02051997:FancyToast-Android:0.1.6'
     implementation 'com.google.android.material:material:1.0.0'
     implementation 'com.github.mjn1369:prettydialog:1.0.4'
+    implementation 'com.rilixtech:materialfancybuttons:1.8.8'
+
 }
 
 repositories {
