@@ -14,9 +14,10 @@ import com.parse.ParseUser;
 import com.parse.SaveCallback;
 import com.shashank.sony.fancytoastlib.FancyToast;
 
-public class SendTweetActivity extends AppCompatActivity {
+public class SendTweetActivity extends AppCompatActivity  {
 
     private EditText editText;
+
 
 
     @Override
@@ -27,6 +28,8 @@ public class SendTweetActivity extends AppCompatActivity {
         setTitle("Tweet");
 
         editText = findViewById(R.id.edtSendTweet);
+
+
 
     }
 
@@ -51,4 +54,6 @@ public class SendTweetActivity extends AppCompatActivity {
             }
         });
     }
+
+
 }

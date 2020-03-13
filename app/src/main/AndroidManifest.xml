@@ -15,7 +15,7 @@
         android:theme="@style/AppTheme">
         <activity android:name=".LoginActivity"></activity>
         <activity android:name=".SendTweetActivity" />
-        <activity android:name=".TwitterUsers" />
+        <activity android:name=".Twitter" />
         <activity android:name=".SignUp" />
         <activity android:name=".StartScreen">
             <intent-filter>

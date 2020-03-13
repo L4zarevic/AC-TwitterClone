@@ -28,7 +28,7 @@ public class StartScreen extends AppCompatActivity implements View.OnClickListen
 
         //Token session check
         if (ParseUser.getCurrentUser() != null) {
-            Intent intentLogIn = new Intent(StartScreen.this, TwitterUsers.class);
+            Intent intentLogIn = new Intent(StartScreen.this, Twitter.class);
             startActivity(intentLogIn);
         }
 

@@ -96,7 +96,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
     }
 
     private void transitionToSocialMediaActivity() {
-        Intent intent = new Intent(LoginActivity.this, TwitterUsers.class);
+        Intent intent = new Intent(LoginActivity.this, Twitter.class);
         startActivity(intent);
         finish();
     }
