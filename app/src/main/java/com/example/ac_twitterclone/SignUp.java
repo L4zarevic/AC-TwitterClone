@@ -6,7 +6,6 @@ import android.os.Bundle;
 import android.view.KeyEvent;
 import android.view.View;
 import android.view.inputmethod.InputMethodManager;
-import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
@@ -15,12 +14,13 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.parse.ParseException;
 import com.parse.ParseUser;
 import com.parse.SignUpCallback;
+import com.rilixtech.materialfancybutton.MaterialFancyButton;
 import com.shashank.sony.fancytoastlib.FancyToast;
 
 public class SignUp extends AppCompatActivity implements View.OnClickListener {
 
     private EditText edtEmail, edtUsername, edtPassword;
-    private Button btnSignUp, btnLogIn;
+    private MaterialFancyButton btnSignUp, btnLogIn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

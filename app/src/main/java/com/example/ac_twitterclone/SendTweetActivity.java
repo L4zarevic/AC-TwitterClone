@@ -24,6 +24,8 @@ public class SendTweetActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_send_tweet);
 
+        setTitle("Tweet");
+
         editText = findViewById(R.id.edtSendTweet);
 
     }

@@ -7,6 +7,7 @@ import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.parse.ParseUser;
 import com.rilixtech.materialfancybutton.MaterialFancyButton;
 
 public class StartScreen extends AppCompatActivity implements View.OnClickListener {
@@ -25,6 +26,12 @@ public class StartScreen extends AppCompatActivity implements View.OnClickListen
         btnCreateAcc.setOnClickListener(this);
         txtLogIn.setOnClickListener(this);
 
+        //Token session check
+        if (ParseUser.getCurrentUser() != null) {
+            Intent intentLogIn = new Intent(StartScreen.this, TwitterUsers.class);
+            startActivity(intentLogIn);
+        }
+
 
     }
 
@@ -36,11 +43,13 @@ public class StartScreen extends AppCompatActivity implements View.OnClickListen
             case R.id.txtLogIn:
                 Intent intentLogIn = new Intent(StartScreen.this, LoginActivity.class);
                 startActivity(intentLogIn);
+
                 break;
 
             case R.id.btnCreateAcc:
                 Intent intentSignUp = new Intent(StartScreen.this, SignUp.class);
                 startActivity(intentSignUp);
+                finish();
                 break;
         }
     }

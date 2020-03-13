@@ -5,8 +5,8 @@ import android.os.Bundle;
 import android.view.KeyEvent;
 import android.view.View;
 import android.view.inputmethod.InputMethodManager;
-import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -14,13 +14,15 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.parse.LogInCallback;
 import com.parse.ParseException;
 import com.parse.ParseUser;
+import com.rilixtech.materialfancybutton.MaterialFancyButton;
 import com.shashank.sony.fancytoastlib.FancyToast;
 
 public class LoginActivity extends AppCompatActivity implements View.OnClickListener {
 
     //Variables
     private EditText edtEmail, edtPassword;
-    private Button btnSignUp, btnLogIn;
+    private TextView txtSignUp;
+    private MaterialFancyButton btnLogIn;
 
 
     @Override
@@ -35,16 +37,16 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
             @Override
             public boolean onKey(View v, int keyCode, KeyEvent event) {
                 if (keyCode == KeyEvent.KEYCODE_ENTER && event.getAction() == KeyEvent.ACTION_DOWN) {
-                    onClick(btnSignUp);
+                    onClick(btnLogIn);
                 }
                 return false;
             }
         });
-        btnSignUp = findViewById(R.id.btnSignUp_LogInActivity);
+        txtSignUp = findViewById(R.id.txtSignUp_LogInActivity);
         btnLogIn = findViewById(R.id.btnLogIn_LogInActivity);
 
         btnLogIn.setOnClickListener(this);
-        btnSignUp.setOnClickListener(this);
+        txtSignUp.setOnClickListener(this);
 
         //Token session check
         if (ParseUser.getCurrentUser() != null) {
@@ -75,7 +77,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
                 }
                 break;
 
-            case R.id.btnSignUp_LogInActivity:
+            case R.id.txtSignUp_LogInActivity:
                 Intent intent = new Intent(LoginActivity.this, SignUp.class);
                 startActivity(intent);
                 break;

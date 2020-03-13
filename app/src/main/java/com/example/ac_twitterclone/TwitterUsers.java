@@ -94,7 +94,7 @@ public class TwitterUsers extends AppCompatActivity implements AdapterView.OnIte
                 ParseUser.getCurrentUser().logOutInBackground(new LogOutCallback() {
                     @Override
                     public void done(ParseException e) {
-                        Intent intent = new Intent(TwitterUsers.this, SignUp.class);
+                        Intent intent = new Intent(TwitterUsers.this, LoginActivity.class);
                         startActivity(intent);
                         finish();
                     }
